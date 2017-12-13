@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sshtest@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sshtest">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="erpdb"/>
+    <schema id="4" parent="1" name="hibernateday03demo1"/>
+    <schema id="5" parent="1" name="hibernatetest"/>
+    <schema id="6" parent="1" name="hibernatetest2"/>
+    <schema id="7" parent="1" name="hibernatetest3"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="springtest"/>
+    <schema id="12" parent="1" name="ssh_demo1"/>
+    <schema id="13" parent="1" name="test"/>
+    <table id="14" parent="2" name="t_customer"/>
+    <table id="15" parent="2" name="t_order"/>
+    <table id="16" parent="2" name="t_user"/>
+    <column id="17" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="14" name="cusImgsrc">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="14" name="cusName">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="20" parent="14" name="cusPhone">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="21" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="15" name="orderNum">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="15" name="price">
+      <Position>2</Position>
+      <DataType>decimal(23,2)|0</DataType>
+    </column>
+    <column id="24" parent="15" name="receiverInfo">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="25" parent="15" name="customer_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="26" parent="15" name="FKesy3n2gc3fa0s3trrk3tvyv9a">
+      <ColNames>customer_id</ColNames>
+    </index>
+    <key id="27" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>orderNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="15" name="FKesy3n2gc3fa0s3trrk3tvyv9a">
+      <ColNames>customer_id</ColNames>
+      <RefSchemaName>sshtest</RefSchemaName>
+      <RefTableName>t_customer</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="29" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="16" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="16" name="age">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="33" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
